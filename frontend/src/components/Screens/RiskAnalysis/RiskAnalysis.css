@@ -1,0 +1,477 @@
+.risk-analysis {
+  width: 100%;
+}
+
+.analysis-container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .analysis-container {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+/* Header Styles */
+.analysis-header {
+  margin-bottom: 1rem;
+}
+
+.analysis-title {
+  color: #0f172a;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.analysis-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Risk Summary Cards */
+.risk-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .risk-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .risk-summary-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.risk-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.risk-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.risk-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.risk-card-label {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.risk-card-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.risk-card-icon-volatility {
+  color: #ff7a45;
+}
+
+.risk-card-icon-var {
+  color: #da3a3a;
+}
+
+.risk-card-icon-beta {
+  color: #ffb020;
+}
+
+.risk-card-icon-sharpe {
+  color: #02c9a1;
+}
+
+.risk-card-value {
+  color: #0a3d91;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.risk-card-trend {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.risk-card-trend-positive {
+  color: #27c46b;
+}
+
+.risk-card-trend-negative {
+  color: #da3a3a;
+}
+
+.risk-card-period {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+/* Tabs */
+.risk-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.risk-tab {
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid transparent;
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.risk-tab-inactive {
+  color: #64748b;
+}
+
+.risk-tab-inactive:hover {
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+.risk-tab-active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+}
+
+/* Tab Content */
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Chart Card */
+.chart-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #d7dee8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .chart-card {
+    padding: 2rem;
+  }
+}
+
+.chart-title {
+  color: #0f172a;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-note {
+  color: #59616a;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Metrics Grid */
+.metrics-grid,
+.var-settings-grid,
+.montecarlo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .metrics-grid,
+  .var-settings-grid,
+  .montecarlo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Metrics Card */
+.metrics-card,
+.settings-card,
+.results-card,
+.stats-card,
+.probability-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7dee8;
+}
+
+.metrics-title,
+.settings-title,
+.results-title,
+.stats-title,
+.probability-title {
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Metrics List */
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.metric-value {
+  color: #2c323a;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e8ecf2;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.progress-fill-10day {
+  width: 61%;
+  background-color: #2a65f9;
+}
+
+.progress-fill-30day {
+  width: 73%;
+  background-color: #ff7a45;
+}
+
+.progress-fill-90day {
+  width: 66%;
+  background-color: #02c9a1;
+}
+
+.progress-fill-annual {
+  width: 99%;
+  background-color: #7038ff;
+}
+
+/* Settings List */
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.setting-label {
+  color: #2c323a;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.setting-select,
+.setting-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.setting-select:focus,
+.setting-input:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* VaR Cards Grid */
+.var-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .var-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.var-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7dee8;
+}
+
+.var-card-primary {
+  background: linear-gradient(135deg, #da3a3a, #ff7a45);
+  color: white;
+  border: none;
+}
+
+.var-card-label {
+  color: #59616a;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.var-card-primary .var-card-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.var-card-value {
+  color: #0a3d91;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.var-card-primary .var-card-value {
+  color: white;
+}
+
+.var-card-description {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.var-card-primary .var-card-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Results List */
+.results-list,
+.stats-list,
+.probability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-item,
+.stat-item,
+.probability-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d7dee8;
+}
+
+.result-item:last-child,
+.stat-item:last-child,
+.probability-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.result-label,
+.stat-label,
+.probability-label {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.result-value,
+.stat-value,
+.probability-value {
+  color: #2c323a;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.result-value-good,
+.stat-value-good,
+.probability-value-good {
+  color: #27c46b;
+}
+
+.result-value-bad,
+.stat-value-bad,
+.probability-value-bad {
+  color: #da3a3a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .risk-tabs {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  
+  .risk-tab {
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .risk-tab-active {
+    border-bottom: 2px solid #1a73e8;
+    background-color: #f8fafc;
+  }
+  
+  .analysis-container {
+    padding: 1.5rem 1rem;
+  }
+}

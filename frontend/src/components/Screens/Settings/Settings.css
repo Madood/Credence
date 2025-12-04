@@ -1,0 +1,534 @@
+.settings-container {
+  padding: 2rem;
+}
+
+.settings-header {
+  margin-bottom: 2rem;
+}
+
+.settings-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1a2937;
+}
+
+.settings-subtitle {
+  color: #59616a;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .settings-layout {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+/* Sidebar Navigation */
+.settings-sidebar {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7dee8;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-button-inactive {
+  color: #59616a;
+  background-color: transparent;
+}
+
+.nav-button-inactive:hover {
+  background-color: #f4f7fa;
+}
+
+.nav-button-active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Content Area */
+.settings-content {
+  width: 100%;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7dee8;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a2937;
+  margin-bottom: 1.5rem;
+}
+
+/* Account Tab Styles */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #1a73e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  color: #2c323a;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.password-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Button Styles */
+.primary-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary-button:hover {
+  background-color: #0a3d91;
+}
+
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #2c323a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.secondary-button:hover {
+  background-color: #f4f7fa;
+}
+
+.danger-button {
+  padding: 0.75rem 1.5rem;
+  color: #da3a3a;
+  background-color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.danger-button:hover {
+  background-color: #f4f7fa;
+}
+
+.button-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Billing Tab Styles */
+.plan-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #f4f7fa;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan-info {
+  flex: 1;
+}
+
+.plan-name {
+  color: #0a3d91;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.plan-period {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.plan-price {
+  text-align: right;
+}
+
+.price-amount {
+  color: #0a3d91;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.price-period {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #f4f7fa;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #d7dee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #59616a;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-type {
+  color: #2c323a;
+  font-weight: 500;
+}
+
+.card-expiry {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.invoice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.invoice-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f4f7fa;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.invoice-date {
+  color: #2c323a;
+}
+
+.invoice-amount {
+  color: #2c323a;
+  font-weight: 500;
+}
+
+.invoice-status {
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(39, 196, 107, 0.1);
+  color: #27c46b;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+.invoice-download {
+  color: #1a73e8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.invoice-download:hover {
+  text-decoration: underline;
+}
+
+/* API Tab Styles */
+.api-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.api-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.api-key-card {
+  padding: 1.5rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.5rem;
+}
+
+.key-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.key-name {
+  color: #2c323a;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.key-value {
+  color: #59616a;
+  background-color: #f4f7fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.key-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key-meta {
+  color: #59616a;
+  font-size: 0.875rem;
+}
+
+.api-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .api-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  color: #59616a;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  color: #0a3d91;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.stat-success {
+  color: #27c46b;
+}
+
+/* Notifications Tab Styles */
+.notifications-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notification-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c323a;
+  margin-bottom: 1rem;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f4f7fa;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.notification-label {
+  color: #2c323a;
+  font-size: 0.875rem;
+}
+
+.notification-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d7dee8;
+  cursor: pointer;
+}
+
+.notification-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
