@@ -1,7 +1,7 @@
 # **📈 Stock Analytics Platform — AI-Driven Equity Research & Real-Time Risk Engine**
 
 <p align="center">
-  <img src="./frontend/public/logo.png" width="160" alt="Platform Logo"/>
+  <img src="./frontend/public/Logo.png" width="160" alt="Platform Logo"/>
 </p>
 
 A modular, production-scale **Stock Analytics Platform** built with
