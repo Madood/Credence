@@ -1,70 +1,288 @@
-# Getting Started with Create React App
+# **📈 Stock Analytics Platform — AI-Driven Equity Research & Real-Time Risk Engine**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="./frontend/public/logo.png" width="160" alt="Platform Logo"/>
+</p>
 
-## Available Scripts
+A modular, production-scale **Stock Analytics Platform** built with
+**React + Node.js + Python FastAPI + MongoDB**, featuring:
 
-In the project directory, you can run:
+* Real-time **Greeks**, derivatives analytics, and WebSocket alerts
+* AI-powered **fundamental valuation** (DCF, Comps)
+* Machine learning **price forecasting**, feature engineering, and XGBoost models
+* NLP sentiment analytics from transcripts and news
+* Risk analytics including **VaR, stress testing, volatility models**
+* Fully containerized with **Docker**, and optionally deployable via **Kubernetes** & **Terraform**
 
-### `npm start`
+> A complete end-to-end system for quantitative research, automated valuation, ML forecasts, and institutional-grade dashboarding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🚀 **Tech Stack Overview**
 
-### `npm test`
+### **Frontend**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React (Vite)
+* Recharts / D3
+* WebSocket live streams
+* Modular dashboard components
 
-### `npm run build`
+### **Backend (Node.js)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Express API gateway
+* WebSocket server
+* Greeks, Black-Scholes, IV solver
+* Market data integrations (IEX, Polygon, Yahoo)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Analytics Engine (Python)**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* FastAPI microservice
+* ML models (Regression, XGBoost, Time-series)
+* Fundamental valuation (DCF, Comps)
+* NLP Sentiment Analysis
+* Risk models (VaR, Stress, Volatility)
 
-### `npm run eject`
+### **Infrastructure**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Docker / Docker Compose
+* K8s manifests (deployments + services)
+* Terraform IaC (optional)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 📁 **Repository Structure**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+stock-analytics-platform/
+│
+├── README.md
+├── docker-compose.yml
+├── package.json
+│
+├── infra/
+│   ├── k8s/
+│   │   ├── backend-deployment.yaml
+│   │   ├── analytics-deployment.yaml
+│   │   └── frontend-deployment.yaml
+│   ├── docker/
+│   │   ├── node.Dockerfile
+│   │   ├── python.Dockerfile
+│   │   └── react.Dockerfile
+│   └── terraform/
+│
+├── backend/                     # Node.js (API + WebSocket + Greeks)
+│   ├── src/
+│   │   ├── app.js
+│   │   ├── config/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── websocket/
+│   │   ├── utils/
+│   │   └── index.js
+│   └── tests/
+│
+├── analytics/                   # Python FastAPI microservice
+│   ├── core/
+│   ├── ml/
+│   ├── fundamental/
+│   ├── nlp/
+│   ├── risk/
+│   ├── routers/
+│   └── models/
+│
+├── frontend/                    # React Dashboard
+│   ├── public/
+│   │   └── logo.png
+│   └── src/
+│       ├── components/
+│       ├── services/
+│       ├── hooks/
+│       ├── layout/
+│       └── styles/
+│
+└── data/
+    ├── market/
+    ├── financials/
+    └── transcripts/
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 🌐 **System Architecture**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+       ┌────────────────┐         ┌──────────────────────┐
+       │   React UI     │ <--->   │   Node.js Backend    │
+       │ Dashboards     │  REST   │  API + WebSockets    │
+       └────────────────┘         └──────────┬───────────┘
+                                              │
+                                              ▼
+                                  ┌─────────────────────────┐
+                                  │   Python FastAPI ML     │
+                                  │  Valuation + NLP + Risk │
+                                  └──────────┬──────────────┘
+                                              │
+                                              ▼
+                                     ┌─────────────────┐
+                                     │    MongoDB      │
+                                     └─────────────────┘
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 🔥 **Core Features**
 
-### Analyzing the Bundle Size
+### 🧮 Fundamental Analysis
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Discounted Cashflow (DCF)
+* Trading/Transaction Comps
+* Ratio analysis and financial metrics
 
-### Making a Progressive Web App
+### 🤖 Machine Learning Suite
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Regression models
+* XGBoost forecasts
+* Time-series predictions
+* Auto-feature engineering
+* Prediction interval generation
 
-### Advanced Configuration
+### 🗣 NLP Engine
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Earnings call sentiment
+* Transcript processing
+* News sentiment scoring
+* LLM-ready embeddings
 
-### Deployment
+### 📉 Risk & Volatility
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Value at Risk (VaR)
+* GARCH-style volatility
+* Stress scenarios
+* Margin alerts
 
-### `npm run build` fails to minify
+### ⚡ Real-time Derivatives Engine
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Black-Scholes Greeks
+* Implied Volatility solver
+* Vol surface generation
+* Hedging assistant
+
+---
+
+# 🛠️ **Setup and Installation**
+
+## **1. Clone the repository**
+
+```
+git clone https://github.com/<your-username>/stock-analytics-platform.git
+cd stock-analytics-platform
+```
+
+---
+
+# 🐳 **Run with Docker Compose**
+
+```
+docker-compose up --build
+```
+
+This launches:
+
+* `frontend` on → **[http://localhost:3000](http://localhost:3000)**
+* `backend` on → **[http://localhost:5000](http://localhost:5000)**
+* `analytics` on → **[http://localhost:8000](http://localhost:8000)**
+
+---
+
+# ▶️ **Run Manually (Dev Mode)**
+
+## **Backend (Node.js)**
+
+```
+cd backend
+npm install
+npm run dev
+```
+
+## **Analytics (Python)**
+
+```
+cd analytics
+pip install -r requirements.txt
+uvicorn app:app --reload --port 8000
+```
+
+## **Frontend (React)**
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+# 🔗 **Environment Variables**
+
+### Backend (`backend/.env`)
+
+```
+MONGO_URI=
+MARKET_API_KEY=
+PYTHON_SERVICE_URL=http://localhost:8000
+```
+
+### Analytics (`analytics/.env`)
+
+```
+MODEL_DIR=./models/trained_models
+```
+
+### Frontend (`frontend/.env`)
+
+```
+VITE_API_URL=http://localhost:5000
+```
+
+---
+
+# 🧪 **Tests**
+
+Run backend tests:
+
+```
+cd backend
+npm test
+```
+
+---
+
+# 📊 **Roadmap**
+
+* [ ] Add LSTM/Transformer forecasting models
+* [ ] Add portfolio optimizer with Markowitz frontier
+* [ ] Integrate live brokerage API
+* [ ] Add automated investment recommendations
+* [ ] Cloud deployment (AWS/GCP/Azure)
+
+---
+
+# 🤝 **Contributing**
+
+1. Fork repo
+2. Create feature branch
+3. Submit PR
+
+---
+
+# 📜 **License**
+
+MIT License — free for personal and commercial use.
+
+---
+
+# ⭐ **Support**
+
+If this project helps your research or trading workflow, consider giving it a **⭐ on GitHub**.
+
+
